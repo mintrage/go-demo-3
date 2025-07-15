@@ -16,5 +16,8 @@ func main() {
 	fmt.Println(m)
 	delete(m, "Yandex")
 	fmt.Println(m)
+	delete(m, "Y")
+	fmt.Println(m["Y"]) // This will print an empty string since "Y" does not exist in the map
+	fmt.Println(m)
 
 }
