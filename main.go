@@ -3,21 +3,8 @@ package main
 import "fmt"
 
 func main() {
-	m := map[string]string{
-		"PurpleSchool": "https://www.purpleschool.com",
+	m := map[string]int{"a": 1, "b": 2}
+	for key, value := range m {
+		fmt.Println(key, value)
 	}
-	fmt.Println(m)
-	fmt.Println(m["PurpleSchool"])
-	m["PurpleSchool"] = "https://www.purpleschool.ru"
-	fmt.Println(m)
-	m["Google"] = "https://www.google.com"
-	fmt.Println(m)
-	m["Yandex"] = "https://www.yandex.ru"
-	fmt.Println(m)
-	delete(m, "Yandex")
-	fmt.Println(m)
-	delete(m, "Y")
-	fmt.Println(m["Y"]) // This will print an empty string since "Y" does not exist in the map
-	fmt.Println(m)
-
 }
