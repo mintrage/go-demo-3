@@ -4,15 +4,10 @@ import "fmt"
 
 func main() {
 	bookmarks := map[string]string{}
-	// fmt.Println("1. Посмотреть закладки")
-	// fmt.Println("2. Добавить закладку")
-	// fmt.Println("3. Удалить закладку")
-	// fmt.Println("4. Выход")
 	var input int
+Menu:
 	for {
 		input = getMenu()
-		// fmt.Print("Выберите действие: ")
-		// fmt.Scan(&input)
 		switch input {
 		case 1:
 			showBookmarks(bookmarks)
@@ -22,7 +17,7 @@ func main() {
 			deleteBookmark(bookmarks)
 		case 4:
 			fmt.Println("Выход из программы")
-			return
+			break Menu
 		}
 	}
 
