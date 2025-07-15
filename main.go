@@ -5,6 +5,12 @@ import "fmt"
 type bookmarkMap map[string]string
 
 func main() {
+	m := make(bookmarkMap, 3)
+	m["A"] = "1"
+	m["B"] = "2"
+	m["C"] = "3"
+	fmt.Println(len(m))
+
 	bookmarks := bookmarkMap{}
 	var input int
 Menu:
